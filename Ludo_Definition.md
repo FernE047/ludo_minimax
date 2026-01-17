@@ -112,15 +112,15 @@ Each Rule is supposed to only contain one fundamental information about the game
 
 ### Core Definition
 
-1. The rules must be defined before the game begins.
-2. Rules can change during the game based on arbitrary conditions.
+1. A set of rules must be defined **before the game begins**.
+2. These rules may allow themselves to **change during the game** based on arbitrary conditions.
 3. Ludo is a **turn-based board game**.
 4. It is played by **Any number of players**.
 5. Each player is assigned a **unique color**.
-6. The game is played on a **board** with shared tiles.
-7. The game uses **markers** that match each player’s color.
+6. The game is played on a **board with shared tiles**.
+7. The game uses **markers** associated with each player’s color.
 8. Each player has **an arbitrary number of markers**.
-9. A player **can move opponent's markers** based on arbitrary rules.
+9. Players may be allowed to **move opponent markers**, according to the rules; ownership of markers does not change, unless specified otherwise.
 10. Each marker progresses through **three phases**: **Start**, **Path**, and **Finish**.
 11. Each player has their own **Start**, and **Finish**, associated with their color.
 12. Only a player’s own markers may use their **Start**, and **Finish**.
@@ -128,13 +128,13 @@ Each Rule is supposed to only contain one fundamental information about the game
 
 ---
 
-### Turn Structure & Dice
+### Turn Structure & Decision-making Mechanism
 
-14. The game uses a decision-making mechanism (such as dice, cards, or others).
-15. The decision-making mechanism must provide **randomness**.
-16. The mechanism does not need to be fair or balanced.
-17. Order of play is determined arbitrarily, either before or during the game.
-18. A turn may be skipped, lost, or altered based on arbitrary conditions.
+14. The game uses a **decision-making mechanism** (such as dice, cards, or others).
+15. This mechanism must introduce **randomness**.
+16. The mechanism does **not** need to be fair or balanced.
+17. Order of play is determined **arbitrarily**, either before or during the game.
+18. A turn may be **skipped, lost, altered, or repeated** based on arbitrary conditions.
 19. On their turn, a player resolves the decision-making mechanism and performs the resulting move(s).
 20. The game can continue indefinitely; **winning conditions are arbitrary.**
 
@@ -142,20 +142,20 @@ Each Rule is supposed to only contain one fundamental information about the game
 
 ### Board & Setup
 
-21. The Path is a shared set of tiles of any shape or topology.
-22. The Path must contain at least one tile that is reachable by all players (to ensure capture).
+21. The **Path** is a shared set of tiles of **any shape or topology**.
+22. The Path must contain **at least one tile reachable by all players**, enabling interaction.
 23. At the start of the game, all markers are placed on their respective **Start**.
 24. The behavior of the **Start** is arbitrary.
 25. There must exist **at least one rule** that allows markers to leave the Start.
 26. When a marker leaves the Start, it is placed on a tile on the Path determined by the rules.
-27. Finish must be reachable from the Path for all players.
+27. The **Finish** must be reachable from the Path for all players.
 
 ---
 
 ### Movement Rules
 
-28. Markers move along the Path according to arbitrary movement rules.
-29. Movement distance and direction are determined by arbitrary factors.
+28. Markers move along the Path according to **arbitrary movement rules**.
+29. Movement distance, direction, and constraints are determined by **arbitrary factors**.
 30. A player may choose **any marker** to move, provided the move is valid.
 
 ---
@@ -163,14 +163,14 @@ Each Rule is supposed to only contain one fundamental information about the game
 ### Capture
 
 31. Multiple markers of the **same player** may occupy the same tile, depending on the rules.
-32. If a marker lands on a tile occupied by one **opponent markers**, **the opponent markers is captured** and returned to their respective Starts.
-33. Capture mechanics can be modified, but must exist in some form.
+32. The game must include **some form of capture or forced interaction** between opponent markers.
+33. Capture mechanics are **arbitrary**, but must exist in at least one game state.
 
 ---
 
 ### Finish
 
-34. The Finish is **exclusive** to each player.
+34. The **Finish** is exclusive to each player.
 35. Markers **cannot be captured** while on the Finish.
-36. Entry into the Finish is governed by arbitrary conditions.
-37. The Finish consists of one or more places, as defined by the rules.
+36. Entry into the Finish is governed by **arbitrary conditions**.
+37. The Finish consists of **one or more places**, as defined by the rules.
