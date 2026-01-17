@@ -1,6 +1,7 @@
 from enum import Enum
 from typing import Literal
 
+unique_id = 0
 
 class TileType(Enum):
     START = 0
@@ -15,6 +16,12 @@ class BoardTile:
         self.next_tiles: list["BoardTile"] = []
         # because a tile can lead to multiple tiles (e.g., branching paths)
         self.accessible_to: Literal["All"] | int = "All"
+        global unique_id
+        self.unique_id = unique_id
+        unique_id += 1
+
+    def get_unique_id(self) -> int:
+        return self.unique_id
 
     def set_tile_type(self, tile_type: TileType) -> None:
         self.tile_type = tile_type
@@ -40,4 +47,4 @@ class BoardTile:
         return tiles
 
     def __repr__(self) -> str:
-        return f"BoardTile(type={self.tile_type}, accessible_to={self.accessible_to})"
+        return f"BoardTile(id={self.unique_id}, type={self.tile_type}, accessible_to={self.accessible_to})"
