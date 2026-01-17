@@ -2,8 +2,8 @@
 
 After researching different interpretations of Ludo, I propose my own definition of its rules, divided into two categories:
 
-* **Strict Ludo Rule Set**: a foundational rule set that defines what most *common* Ludo games share.
-* **Loose Ludo Rule Set**: a minimal rule set containing only the essential elements required for a game to still be considered Ludo.
+- **Strict Ludo Rule Set**: a foundational rule set that defines what most _common_ Ludo games share.
+- **Loose Ludo Rule Set**: a minimal rule set containing only the essential elements required for a game to still be considered Ludo.
 
 This project will initially follow the **Strict Ludo Rule Set**, and will gradually relax constraints until it reaches the **Loose Ludo** definition.
 
@@ -113,56 +113,56 @@ Each Rule is supposed to only contain one fundamental information about the game
 ### Core Definition
 
 1. The rules must be defined before the game begins.
-2. rules can change during the game based on arbitrary conditions.
+2. Rules can change during the game based on arbitrary conditions.
 3. Ludo is a **turn-based board game**.
 4. It is played by **Any number of players**.
 5. Each player is assigned a **unique color**.
 6. The game is played on a **board** with shared tiles.
 7. The game uses **markers** that match each player’s color.
-8. Each player has **An arbitrary number of markers**. 
+8. Each player has **an arbitrary number of markers**.
 9. A player **can move opponent's markers** based on arbitrary rules.
-10. All markers are **provided by the game**.
-11. Each marker progresses through **three phases**: **Start**, **Path**, and **Finish**.
-12. Each player has their own **Start**, and **Finish**, associated with their color.
-13. Only a player’s own markers may use their **Start**, and **Finish**.
-14. A player **wins** by placing **all of their markers** on their **Finish**.
+10. Each marker progresses through **three phases**: **Start**, **Path**, and **Finish**.
+11. Each player has their own **Start**, and **Finish**, associated with their color.
+12. Only a player’s own markers may use their **Start**, and **Finish**.
+13. A player **wins** by placing **all of their markers** on their **Finish**.
 
 ---
 
 ### Turn Structure & Dice
 
-15. The game is played using a decision-making mechanism, be it dice or cards or others
-16. the decision-making mechanism must provide **randomness**.
-17. the decision-making mechanism can be unfair.
-18. Order of play is determined arbitrarily before the game begins or while the game is played.
-19. A turn can be skipped or lost based on arbitrary conditions.
-20. On their turn, a player resolves the decision-making mechanism and performs the resulting move(s).
-21. The game can continue indefinitely; winning conditions are arbitrary.
+14. The game uses a decision-making mechanism (such as dice, cards, or others).
+15. The decision-making mechanism must provide **randomness**.
+16. The mechanism does not need to be fair or balanced.
+17. Order of play is determined arbitrarily, either before or during the game.
+18. A turn may be skipped, lost, or altered based on arbitrary conditions.
+19. On their turn, a player resolves the decision-making mechanism and performs the resulting move(s).
+20. The game can continue indefinitely; **winning conditions are arbitrary.**
 
 ---
 
 ### Board & Setup
 
-22. The **Path** is a board of any shape shared by all players.
+21. The Path is a shared set of tiles of any shape or topology.
+22. The Path must contain at least one tile that is reachable by all players (to ensure capture).
 23. At the start of the game, all markers are placed on their respective **Start**.
-24. how **Start** functions is arbitrary.
-25. There must be a way to remove markers from the Start.
-26. When a marker leaves the Start, it is placed on a tile on the Path designated for that purpose or decided arbitrarily.
+24. The behavior of the **Start** is arbitrary.
+25. There must exist **at least one rule** that allows markers to leave the Start.
+26. When a marker leaves the Start, it is placed on a tile on the Path determined by the rules.
 27. Finish must be reachable from the Path for all players.
 
 ---
 
 ### Movement Rules
 
-28. Markers move along the Path, following arbitrary rules.
-29. Movement distance is determined by factors.
+28. Markers move along the Path according to arbitrary movement rules.
+29. Movement distance and direction are determined by arbitrary factors.
 30. A player may choose **any marker** to move, provided the move is valid.
 
 ---
 
 ### Capture
 
-31. Two or more markers of the **same player** may occupy the same tile, depending on rules.
+31. Multiple markers of the **same player** may occupy the same tile, depending on the rules.
 32. If a marker lands on a tile occupied by one **opponent markers**, **the opponent markers is captured** and returned to their respective Starts.
 33. Capture mechanics can be modified, but must exist in some form.
 
@@ -172,5 +172,5 @@ Each Rule is supposed to only contain one fundamental information about the game
 
 34. The Finish is **exclusive** to each player.
 35. Markers **cannot be captured** while on the Finish.
-36. A marker may only move into the Finish if the decision-making mechanism allows it.
-37. The Finish consists of **a place**.
+36. Entry into the Finish is governed by arbitrary conditions.
+37. The Finish consists of one or more places, as defined by the rules.
